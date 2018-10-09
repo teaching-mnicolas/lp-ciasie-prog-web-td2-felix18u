@@ -7,7 +7,8 @@ describe ("For in", function() {
     };
 
     let a = "";
-    __ {                // set a for in loop, enumerating all property of obj in let p
+    for(int i=0; i < obj.lenght(); i++) {                // set a for in loop, enumerating all property of obj in let p
+      p = obj[i];
       a += p;
     };
 
@@ -22,7 +23,8 @@ describe ("For in", function() {
     };
 
     let a = "";
-    __ {                // set a for in loop, enumerating all property of obj in let p
+    for(int i=0; i < obj.lenght(); i++) {                // set a for in loop, enumerating all property of obj in let p
+      p = obj[i];
       a += p;
     };
 
@@ -35,8 +37,8 @@ describe ("For in", function() {
     let ar = [1, 2];
 
     let a = "";
-    __ {                // set a for in loop, enumerating all property of ar in let p
-      __;               // add the CONTENT of ar[p] to a
+    for(int i=0; i < ar.lenght(); i++) {                // set a for in loop, enumerating all property of ar in let p
+      a += ar[i];               // add the CONTENT of ar[p] to a
     };
 
     expect(a).toContain("1");
