@@ -1,4 +1,4 @@
-describe ("Function Name", function() {
+/*describe ("Function Name", function() {
 
   it ("can have a name", function() {
     function f() {

@@ -5,7 +5,7 @@ describe ("Arguments", function() {
       expect(arguments.length).not.toBeLessThan(2);
       return arg1 + 1;
     };
-    expect(f(__)).toEqual(2);   // call f with 5 arguments, first being value 1
+    expect(f(1,2,3,4,5)).toEqual(2);   // call f with 5 arguments, first being value 1
   });
 
   it ("can take less arguments than declared", function() {
@@ -14,22 +14,22 @@ describe ("Arguments", function() {
       expect(arg2).toBeUndefined();
       return arg1 + 1;
     };
-    expect(f(__)).toEqual(2);   // call f with only one argument, value 1
+    expect(f(1)).toEqual(2);   // call f with only one argument, value 1
   });
 
   it ("has the number of parameters declared in property 'length'", function() {
     let f = function(arg1, arg2) {};
-    expect(__).toEqual(2);      // check the property length of f
+    expect(f.length).toEqual(2);      // check the property length of f
   });
 
   it ("has all args in 'arguments'", function() {
     let f = function(arg1, arg2) {
-      expect(__).toBeDefined();      // check that arguments is defined
-      expect(__).toEqual(3);         // check property length of arguments
-      expect(__).toEqual(1);         // check content of arguments[0]
-      expect(__).toEqual(2);         // check content of arguments[1]
-      expect(__).toEqual(3);         // check content of arguments[2]
-      expect(__).toBeUndefined();    // check that arguments[3] is undefined
+      expect(f.arguments).toBeDefined();      // check that arguments is defined
+      expect(f.arguments.length).toEqual(3);         // check property length of arguments
+      expect(f.arguments[0]).toEqual(1);         // check content of arguments[0]
+      expect(f.arguments[1]).toEqual(2);         // check content of arguments[1]
+      expect(f.arguments[2]).toEqual(3);         // check content of arguments[2]
+      expect(f.arguments[3]).toBeUndefined();    // check that arguments[3] is undefined
     };
     f(1, 2, 3);
   });
@@ -39,7 +39,7 @@ describe ("Arguments", function() {
 
     let wrapper = function() {
       let f = function() {
-        arguments.__;           // call method pop() on arguments - it will throw undefined
+        arguments.pop();           // call method pop() on arguments - it will throw undefined
       };
       f(1, 2);
     };

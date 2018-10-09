@@ -1,4 +1,4 @@
-describe ("Function", function() {
+/*describe ("Function", function() {
 
   it ("can have property", function() {
     let f = function() {
