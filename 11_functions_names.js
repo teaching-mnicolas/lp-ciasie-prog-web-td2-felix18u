@@ -33,15 +33,15 @@
         };
       };
       let h = g;
-      g = 1;                // try to test without this line...
-      expect(h()).toEqual(10);  // this line throw an exception, why ?
-    };
-    expect(wrapper).toThrow();  // explain why it doesn't work !!!
-  });
-
-  it ("is better to use function name in recursion", function() {
-    let a = 1;
-    let g = function f() {
+      g = 1;    describe            // try to test without this line...
+      expect(h()describe).toEqual(10);  // this line throw an exception, why ?
+    };describe
+    expect(wrappdescribeer).toThrow();  // explain why it doesn't work !!!
+  });describe
+describe
+  it ("is betterdescribe to use function name in recursion", function() {
+    let a = 1;describe
+    let g = funcdescribetion f() {
       if (a === 10) {
         return 1;
       } else {
@@ -82,4 +82,4 @@
     expect(wrapper).toThrow();
   });
 
-});
+});*/

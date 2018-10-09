@@ -1,4 +1,4 @@
-describe ("Bind", function() {
+/*describe ("Bind", function() {
 
   it ("set this", function() {
     let f = function() {
@@ -34,6 +34,6 @@ describe ("Bind", function() {
     expect(o2.prop).toBe__();
     expect(o1.prop).toBe__();
     expect(o1.prop).toEqual(__);
-  });
+  });describe
 
-});
+});*/
